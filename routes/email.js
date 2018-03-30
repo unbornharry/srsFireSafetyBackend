@@ -15,6 +15,8 @@ var smtpTransport = nodemailer.createTransport({
 
 
 router.get('/',function(req,res){
+
+    console.log("Got request to send email");
     var mailOptions={
        from: 'untamedbarbarian@yahoo.com',
        to : 'untamedbarbarian@yahoo.com',
