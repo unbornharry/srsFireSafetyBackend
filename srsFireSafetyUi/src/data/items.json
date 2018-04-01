@@ -1,0 +1,50 @@
+{
+  "fireExtinguishers": [
+    {"image": "./fireExtinguishers/powderFireExtinguishers.png", "title": "Powder Fire Extinguishers"},
+    {"image": "./fireExtinguishers/cleanAgentFireExtinguishers.png", "title": "Clean Agent Fire Extinguishers"},
+    {"image": "./fireExtinguishers/waterFireExtinguishers.png", "title": "Water Fire Extinguishers"},
+    {"image": "./fireExtinguishers/foamFireExtinguishers.png", "title": "Foam Fire Extinguishers"},
+    {"image": "./fireExtinguishers/carbonDioxideFireExtinguishers.png", "title": "Carbon dioxide Fire Extinguishers"},
+    {"image": "./fireExtinguishers/waterMistFireExtinguishers.png", "title": "Water Mist Fire Extinguishers"},
+    {"image": "./fireExtinguishers/backupTrolleyFireExtinguishers.png", "title": "Backup Trolley Mount Fire Extinguishers"},
+    {"image": "./fireExtinguishers/mriSafeFireExtinguishers.png", "title": "MRI Safe Fire Extinguishers"},
+    {"image": "./fireExtinguishers/automaticFireExtinguishers.png", "title": "Automatic Fire Extinguishers"}
+  ],
+  "fireHydrantSystem":[
+    {"image": "./comingSoon.png", "title": "Yard Fire Hydrant System"},
+    {"image": "./comingSoon.png", "title": "Hose Reel System"},
+    {"image": "./comingSoon.png", "title": "Down Riser System"},
+    {"image": "./comingSoon.png", "title": "Dry Riser System"},
+    {"image": "./comingSoon.png", "title": "Wet Riser System"},
+    {"image": "./comingSoon.png", "title": "Automatic Sprinkler System"}
+  ],
+  "smokeAndFireDetectionSystem": [
+    {"image": "./comingSoon.png", "title": "Conventional Fire Alarm System"},
+    {"image": "./comingSoon.png", "title": "Addressable Fire Alarm System"},
+    {"image": "./comingSoon.png", "title": "Stand Alone Fire Alarm System"}
+  ],
+  "escapeSignsAndLighting": [
+    {"image": "./comingSoon.png", "title": "Photo Luminescent Sign Boards"},
+    {"image": "./comingSoon.png", "title": "LED Sign Boards"},
+    {"image": "./comingSoon.png", "title": "Normal Sign Boards"},
+    {"image": "./comingSoon.png", "title": "Emergency Exit Lights"}
+  ],
+  "safetySuits": [
+    {"image": "./safetySuits/boilerSuits.png", "title": "Boiler Suits"},
+    {"image": "./safetySuits/industrialSuits.png", "title": "Industrial Suits"},
+    {"image": "./safetySuits/fireSuits.png", "title": "Fire Suits"}
+  ],
+  "personalProtectiveEquipment": [
+    {"image": "./comingSoon.png", "title": "Head Protection"},
+    {"image": "./comingSoon.png", "title": "Eye Protection"},
+    {"image": "./comingSoon.png", "title": "Ear Protection"},
+    {"image": "./comingSoon.png", "title": "Face Protection"},
+    {"image": "./comingSoon.png", "title": "Hand Protection"},
+    {"image": "./comingSoon.png", "title": "Leg Protection"}
+  ],
+  "suppressionSystem": [
+    {"image": "./comingSoon.png", "title": "Gas Suppression System"},
+    {"image": "./comingSoon.png", "title": "Kitchen Suppression System"},
+    {"image": "./comingSoon.png", "title": "Water Mist Suppression System"}
+  ]
+}

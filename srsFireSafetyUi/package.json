@@ -1,0 +1,27 @@
+{
+  "name": "srsfiresafetyui",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-map-components": "^1.0.12",
+    "react-responsive-carousel": "^3.1.33",
+    "react-responsive-modal": "^2.0.1",
+    "react-scripts": "1.1.1",
+    "react-sidemenu": "^0.0.14",
+    "reactjs-carousel": "^1.16.1",
+    "google-map-react": "^0.32.0",
+    "pubsub-js": "^1.6.0",
+    "rc-menu": "^6.2.6",
+    "http-proxy": "^1.16.2",
+    "sync-request": "^4.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:3001"
+}
