@@ -11,17 +11,19 @@
     {"image": "./fireExtinguishers/automaticFireExtinguishers.png", "title": "Automatic Fire Extinguishers"}
   ],
   "fireHydrantSystem":[
-    {"image": "./comingSoon.png", "title": "Yard Fire Hydrant System"},
-    {"image": "./comingSoon.png", "title": "Hose Reel System"},
-    {"image": "./comingSoon.png", "title": "Down Riser System"},
-    {"image": "./comingSoon.png", "title": "Dry Riser System"},
-    {"image": "./comingSoon.png", "title": "Wet Riser System"},
-    {"image": "./comingSoon.png", "title": "Automatic Sprinkler System"}
+    {"image": "./fireHydrantSystem/YARD FIRE HYDRONT SYSTEM.png", "title": "Yard Fire Hydrant System"},
+    {"image": "./fireHydrantSystem/HYDRANT ACCESSORIES.png", "title": "Hydrant Accessories"},
+    {"image": "./fireHydrantSystem/HOSE REEL SYSTEM.png", "title": "Hose Reel System"},
+    {"image": "./fireHydrantSystem/DRY RISER SYSTEM.png", "title": "Dry Riser System"},
+    {"image": "./fireHydrantSystem/DOWN COMER SYSTEM.png", "title": "Down Comer System"},
+    {"image": "./fireHydrantSystem/WET RISER SYSTEM.png", "title": "Wet Riser System"},
+    {"image": "./fireHydrantSystem/AUTOMATIC SPRINKLER SYSTEM.png", "title": "Automatic Sprinkler System"}
   ],
   "smokeAndFireDetectionSystem": [
-    {"image": "./comingSoon.png", "title": "Conventional Fire Alarm System"},
-    {"image": "./comingSoon.png", "title": "Addressable Fire Alarm System"},
-    {"image": "./comingSoon.png", "title": "Stand Alone Fire Alarm System"}
+    {"image": "./smokeAndFireDetectionSystem/CONVENTIONAL FIRE ALARM SYSTEM.png", "title": "Conventional Fire Alarm System"},
+    {"image": "./smokeAndFireDetectionSystem/ADDRESSABLE FIRE ALARM SYSTEM.png", "title": "Addressable Fire Alarm System"},
+    {"image": "./smokeAndFireDetectionSystem/STAND ALONE FIRE ALARM SYSTEM.png", "title": "Stand Alone Fire Alarm System"},
+    {"image": "./smokeAndFireDetectionSystem/ADDRESSABLE FIRE ALARM SYSTEM.png", "title": "Vesda Fire Alarm System"}
   ],
   "escapeSignsAndLighting": [
     {"image": "./comingSoon.png", "title": "Photo Luminescent Sign Boards"},
@@ -35,16 +37,17 @@
     {"image": "./safetySuits/fireSuits.png", "title": "Fire Suits"}
   ],
   "personalProtectiveEquipment": [
-    {"image": "./comingSoon.png", "title": "Head Protection"},
-    {"image": "./comingSoon.png", "title": "Eye Protection"},
-    {"image": "./comingSoon.png", "title": "Ear Protection"},
-    {"image": "./comingSoon.png", "title": "Face Protection"},
-    {"image": "./comingSoon.png", "title": "Hand Protection"},
-    {"image": "./comingSoon.png", "title": "Leg Protection"}
+    {"image": "./personalProtectiveEquipment/HEAD PROTECTION.png", "title": "Head Protection"},
+    {"image": "./personalProtectiveEquipment/EYE PROTECTION.png", "title": "Eye Protection"},
+    {"image": "./personalProtectiveEquipment/EAR PROTECTION.png", "title": "Ear Protection"},
+    {"image": "./personalProtectiveEquipment/NOSE PROTECTION.png", "title": "Nose Protection"},
+    {"image": "./personalProtectiveEquipment/Face protection.png", "title": "Face Protection"},
+    {"image": "./personalProtectiveEquipment/HAND PROTECTION.png", "title": "Hand Protection"},
+    {"image": "./personalProtectiveEquipment/LEG PROTECTION.png", "title": "Leg Protection"}
   ],
   "suppressionSystem": [
-    {"image": "./comingSoon.png", "title": "Gas Suppression System"},
-    {"image": "./comingSoon.png", "title": "Kitchen Suppression System"},
-    {"image": "./comingSoon.png", "title": "Water Mist Suppression System"}
+    {"image": "./suppressionSystem/gasSuppressionSystem.png", "title": "Gas Suppression System"},
+    {"image": "./suppressionSystem/kitchenSuppressionSystem.png", "title": "Kitchen Suppression System"},
+    {"image": "./suppressionSystem/waterMistSuppressionSystem.png", "title": "Water Mist Suppression System"}
   ]
 }
