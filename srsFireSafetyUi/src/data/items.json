@@ -23,7 +23,7 @@
     {"image": "./smokeAndFireDetectionSystem/CONVENTIONAL FIRE ALARM SYSTEM.png", "title": "Conventional Fire Alarm System"},
     {"image": "./smokeAndFireDetectionSystem/ADDRESSABLE FIRE ALARM SYSTEM.png", "title": "Addressable Fire Alarm System"},
     {"image": "./smokeAndFireDetectionSystem/STAND ALONE FIRE ALARM SYSTEM.png", "title": "Stand Alone Fire Alarm System"},
-    {"image": "./smokeAndFireDetectionSystem/ADDRESSABLE FIRE ALARM SYSTEM.png", "title": "Vesda Fire Alarm System"}
+    {"image": "./smokeAndFireDetectionSystem/VESDA FIRE ALARM SYSTEM.png", "title": "Vesda Fire Alarm System"}
   ],
   "escapeSignsAndLighting": [
     {"image": "./comingSoon.png", "title": "Photo Luminescent Sign Boards"},
