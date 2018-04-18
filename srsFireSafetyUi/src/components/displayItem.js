@@ -67,7 +67,7 @@ class displayItem extends Component {
         this.setState({modalOpen: true});
     }
     render(){
-        let { image, title} = this.props;
+        let { image, title, description, options} = this.props;
         let img_src = images(image);
         return(
             <div style={style}>
@@ -80,7 +80,7 @@ class displayItem extends Component {
                       Show Details
                     </button>
                 </div>
-                { this.state.modalOpen ? <ItemDetailsModal image = {image} title = {title} modalOpen={this.state.modalOpen} /> : null }
+                { this.state.modalOpen ? <ItemDetailsModal image = {image} title = {title} description = {description} options = {options} modalOpen={this.state.modalOpen} /> : null }
             </div>
         );
     }

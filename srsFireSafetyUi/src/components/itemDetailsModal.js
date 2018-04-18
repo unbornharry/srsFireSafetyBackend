@@ -39,9 +39,10 @@ class itemDetailsModal extends Component {
     };
 
     render(){
-        let { image, title} = this.props;
+        let { image, title, description, options} = this.props;
         let img_src = images(image);
         const { open } = this.state;
+
         return(
             <Modal
               open={open}
@@ -62,27 +63,22 @@ class itemDetailsModal extends Component {
                     </tr>
                     <tr>
                         <td><img src={img_src}  alt=""/> </td>
-                        <td><p style={{color:'red'}}>
-                        Description:<br/><br/>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                            pulvinar risus non risus hendrerit venenatis. Pellentesque sit amet
-                            hendrerit risus, sed porttitor quam.
-                            </p>
+                        <td>
+                            {description ? <div style={{color:'red', fontWeight: 'bold'}}>Description:</div> : null }
+                            <div>
+                                <ul>
+                                {description ? description.map(para => (<li>{para}</li>)) : null}
+                                </ul>
+                            </div>
                         </td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td style={{color:'red'}}><p>Options:</p>
-                        <form className="boxed">
-                            <label>1KG<input type="radio" id="one" name="weight" value="1KG"/></label>
-                            <label>2KG<input type="radio" id="two" name="weight" value="2KG"/></label>
-                            <label>3KG<input type="radio" id="three" name="weight" value="3KG"/></label>
-                            <label>4KG<input type="radio" id="Four" name="weight" value="4KG"/></label>
-                            <label>5KG<input type="radio" id="Five" name="weight" value="5KG"/></label>
-                            <br/><br/>
-                            <button style= {buttonStyle} name="callBack"> Request CallBack</button>
-                            <button style= {buttonStyle} name="enquiry"> Send Enquiry</button>
-                        </form>
+                        <td style={{color:'red'}}>
+                            {options ? <p style={{color:'red', fontWeight: 'bold'}}>Options</p> : null}
+                            <form className="boxed">
+                            {options ? options.map(option =>(<label>{option}<input type="radio" id={option} value={option}/></label>)) : null}
+                            </form>
                         </td>
                     </tr>
                     </tbody>
@@ -93,3 +89,14 @@ class itemDetailsModal extends Component {
 }
 
 export default itemDetailsModal;
+
+//
+//                            <label>1KG<input type="radio" id="one" name="weight" value="1KG"/></label>
+//                            <label>2KG<input type="radio" id="two" name="weight" value="2KG"/></label>
+//                            <label>3KG<input type="radio" id="three" name="weight" value="3KG"/></label>
+//                            <label>4KG<input type="radio" id="Four" name="weight" value="4KG"/></label>
+//                            <label>5KG<input type="radio" id="Five" name="weight" value="5KG"/></label>
+//                            <br/><br/>
+//                            <button style= {buttonStyle} name="callBack"> Request CallBack</button>
+//                            <button style= {buttonStyle} name="enquiry"> Send Enquiry</button>
+//
