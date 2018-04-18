@@ -21,8 +21,9 @@ const headingStyle = {
     color: 'white',
     fontSize: '48px',
     height: 'auto',
-    fontFamily: 'Cinzel Decorative, cursive'
-}
+    fontFamily: 'constantia',
+    fontWeight: 800
+};
 
 const menuStyle = {
     display: 'inline-block',
@@ -30,13 +31,13 @@ const menuStyle = {
     background: '#222D32',
     color: 'green',
     borderRadius: '10px 10px 0 0'
-}
+};
 
 const menuItemStyle = {
     fontFamiy: 'Arial, Helvetica, serif',
     fontWeight: 'bold',
     borderRadius: '10px 10px 0 0'
-}
+};
 
 class header extends Component {
     menuItemClicked = (value) =>{

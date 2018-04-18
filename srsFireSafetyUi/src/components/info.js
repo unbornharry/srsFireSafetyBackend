@@ -11,17 +11,21 @@ const infoStyle = {
     right: '1vw',
     height: '100px',
     color: 'white',
-    fontFamily: '"Slabo 40px", serif'
-}
+    fontFamily: 'verdana'
+};
+
+const nameStyle = {
+    fontFamily: 'constantia'
+};
 
 const logoStyle = {
     verticalAlign: 'center',
     textAlign: 'center'
-}
+};
 
 const linkStyle = {
     color: 'white'
-}
+};
 
 
 class info extends Component {
@@ -32,7 +36,7 @@ class info extends Component {
                 <Logo />
             </div>
             <div style={infoStyle}>
-                <h2>SRS Enterprises</h2>
+                <h2 style={nameStyle}>SRS Enterprises</h2>
                 <p>70A/1, K.K.NAGAR,</p>
                 <p>Kavundampalayam</p>
                 <p>Coimbatore - 641030</p>

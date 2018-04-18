@@ -3,3 +3,13 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+@font-face {
+  font-family: 'constantia';
+  src: local('constantia'), url(./fonts/constan.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'verdana';
+  src: local('verdana'), url(./fonts/verdana.ttf) format('truetype');
+}

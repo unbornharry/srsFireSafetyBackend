@@ -15,6 +15,8 @@ const style = {
     marginTop: '10px'
 };
 
+const menuItemStyle = {color: "white", fontWeight: "300", fontSize: "13px", fontFamily: 'verdana'};
+
 const items = {
     products: [
     {divider: true, label: 'Our Products', value: 'products'},
@@ -67,7 +69,7 @@ class sideMenu extends Component {
         return(
             <div style={style}>
                     <SideMenu items={this.state.menuList} shouldTriggerClickOnParents={true} onMenuItemClick={this.itemClicked} renderMenuItemContent={(item) =>
-                     (<span><i className={'fa ' + item.icon}></i><strong style={{color: "white", fontWeight: "300", fontSize: "15px", fontFamily: '"Slabo 40px", serif'}}>  {item.label}</strong></span>)}/>
+                     (<span><i className={'fa ' + item.icon}></i><strong style={menuItemStyle}>   {item.label}</strong></span>)}/>
             </div>
         );
     }
