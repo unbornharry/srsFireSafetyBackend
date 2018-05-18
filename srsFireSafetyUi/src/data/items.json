@@ -5,23 +5,53 @@
     },
     {
       "image": "./fireExtinguishers/cleanAgentFireExtinguishers.png",
-      "title": "Clean Agent Fire Extinguishers"
+      "title": "Clean Agent Fire Extinguishers",
+      "description": ["ABC type fire extinguisher is an ISI marked extinguisher.",
+        "It helps to protect from all three A. B. C classes and Electrical fire.",
+        "Class A: Papers, Wood, Cloth, Rubber, Plastic.",
+        "Class B: Inflammable liquid like oil, Petrol, Petrochemical Product.",
+        "Class C: Gases, solvents, oil, gasoline, paint, lacquers, tars and other synthetic or oil-based products.",
+        "Capacity: 1kg, 2kg ,4kg, 6kg, 9kg, 25kg, 50kg, 75kg.",
+        "Warrenty for 5 years in ISI branded fire extinguishers.",
+        "Can be refilled after each use.",
+        "Control small fires, often in emergency situations, not intended for use on an out-of-control fire.",
+        "It uses a specially fluidized and silicon zed monoammonium phosphate powder."]
     },
     {
       "image": "./fireExtinguishers/waterFireExtinguishers.png",
-      "title": "Water Fire Extinguishers"
+      "title": "Water Fire Extinguishers",
+      "description": ["Water  fire extinguisher is an ISI marked extinguisher.",
+        "Water helps to protect from all three A classes of fire.",
+        "Class A: Papers,  Wood,  Cloth, Rubber, Plastic.",
+        "Capacity: 9kg, 25kg, 50kg, 75kg.",
+        "Warrenty for 5 years in ISI branded fire extinguihsers.",
+        "Can be refilled after each use."]
     },
     {
       "image": "./fireExtinguishers/foamFireExtinguishers.png",
-      "title": "Foam Fire Extinguishers"
+      "title": "Foam Fire Extinguishers",
+      "description": ["AFFF Foam fire extinguisher is an ISI marked extinguisher.",
+        "AFFF helps to protect from all three A and B classes of fire.",
+        "Class A: Papers, Wood, Cloth, Rubber, Plastic.",
+        "Class B: Inflammable liquid like oil, Petrol, Petrochemical Product.",
+        "Capacity: 9kg, 25kg, 50kg, 75kg.",
+        "Warranty for 5 years in ISI branded fire extinguishers.",
+        "Can be refilled after each use.",
+        "Firefighting foam is used for fire suppression. Its role is to cool the fire and to coat the fuel, preventing its contact with oxygen, resulting in suppression of the combustion.",
+        "Foam is a substance formed by trapping pockets of gas in a liquid or solid."]
     },
     {
       "image": "./fireExtinguishers/carbonDioxideFireExtinguishers.png",
       "title": "Carbon dioxide Fire Extinguishers",
-      "description": ["Suitable for B & C class of fires involving all flammable liquids or gases, machinery fires, electrical equipment fires and transformer/switch gear fires",
-          "Approved by explosive department. Govt. of India, Nagpur",
-          "New CO2 squeeze grip type portable models are also available"
-      ]
+      "description": ["Co2 type fire extinguisher is an ISI marked extinguisher.",
+        "Co2 helps to protect from B & C classes of fire.",
+        "Class B: Inflammable liquid like oil, Petrol, Petrochemical Product.",
+        "Class C: Electrical equipments, transformer & switch gear fire, Gases, solvents, oil, gasoline, paint, lacquers, tars and other synthetic or oil-based products",
+        "Capacity:  2.5kg ,4.5kg, 6.5kg, 9.5kg.",
+        "Warrenty for 5 years in ISI branded fire extinguihsers.",
+        "Can be refilled after each use.",
+        "Carbon dioxide extinguishers work well on small flammable liquid and electrical fires, but not on ordinary combustible fires.",
+        "Carbon dioxide will not cause short circuits, leading to even more damage to equipment."      ]
     },
     {
       "image": "./fireExtinguishers/waterMistFireExtinguishers.png",
