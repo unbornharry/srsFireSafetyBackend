@@ -36,7 +36,7 @@ class info extends Component {
                 <Logo />
             </div>
             <div style={infoStyle}>
-                <h2 style={nameStyle}>SRS Enterprises</h2>
+                <h2 style={nameStyle}>SRS ENTERPRISES</h2>
                 <p>70A/1, K.K.NAGAR,</p>
                 <p>Kavundampalayam</p>
                 <p>Coimbatore - 641030</p>

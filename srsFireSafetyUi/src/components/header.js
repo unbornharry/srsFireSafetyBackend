@@ -49,7 +49,7 @@ class header extends Component {
         <div style={headerStyle}>
             <div>
                 <Logo />
-                <h1 style={headingStyle}> SRS Enterprises </h1>
+                <h1 style={headingStyle}> SRS ENTERPRISES </h1>
             </div>
             <Menu style={menuStyle} mode="horizontal" defaultActiveFirst={true} onClick={this.menuItemClicked}>
               <MenuItem style={menuItemStyle} key='home'>Home</MenuItem>

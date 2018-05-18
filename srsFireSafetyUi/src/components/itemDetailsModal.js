@@ -22,6 +22,10 @@ const buttonStyle = {
 	boxShadowhadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)',
 };
 
+const modalStyle = {
+    minWidth: '500px'
+};
+
 class itemDetailsModal extends Component {
 
     constructor(props){
@@ -44,7 +48,7 @@ class itemDetailsModal extends Component {
         const { open } = this.state;
 
         return(
-            <Modal
+            <Modal style={modalStyle}
               open={open}
               onClose={this.onCloseModal}
               little
