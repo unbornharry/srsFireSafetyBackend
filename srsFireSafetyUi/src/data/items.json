@@ -75,6 +75,20 @@
       "description": ["For Widespread Occupancies & Storage areas Like: Storage of Flammable & Combustible liquids & gases, chemical and grain mill product, Solid fuels, Libraries records, Museums, Showrooms, Shops, Office, residential premises, Workshop, radio rooms, T.V. Station etc",
       "Consists of ABC Dry powder, Dry chemical powder. Clean Agent etc"],
       "options": ["2kg", "5kg", "10kg", "15kg"]
+    },
+    {
+      "image": "./fireExtinguishers/dcpFireExtinguishers.png",
+      "title": "DCP/BC Fire Extinguishers",
+      "description": ["DCP type fire extinguisher is an ISI marked extinguisher.",
+        "DCP helps to protect from all three A. B. C classes of fire.",
+        "Class A: Papers,  Wood,  Cloth, Rubber, Plastic.",
+        "Class B: Inflammable liquid like oil, Petrol, Petrochemical Product.",
+        "Class C: Gases, solvents, oil, gasoline, paint, lacquers, tars and other synthetic or oil-based products and Electrical Fire.",
+        "Capacity: 1kg, 2kg ,4kg, 6kg, 9kg, 25kg, 50kg, 75kg.",
+        "Warrenty for 5 years in ISI branded fire extinguihsers.",
+        "Can be refilled after each use.",
+        "Control small fires, often in emergency situations, not intended for use on an out-of-control fire.",
+        "It uses a specially fluidized and silicon zed monoammonium phosphate powder."]
     }
   ],
   "fireHydrantSystem": [{
