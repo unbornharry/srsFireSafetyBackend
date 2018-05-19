@@ -72,7 +72,7 @@ class displayItem extends Component {
         return(
             <div style={style}>
                 <div style={imageStyle}>
-                    <img src={img_src} style={imageStyle} alt=""  />
+                    <img src={img_src} style={imageStyle} onClick={this.openModal} alt=""  />
                 </div>
                 <div style={captionStyle}>{title}</div>
                 <div style={captionStyle}>

@@ -1,21 +1,25 @@
 {
   "fireExtinguishers": [{
-    "image": "./fireExtinguishers/powderFireExtinguishers.png",
-    "title": "Powder Fire Extinguishers"
-    },
-    {
-      "image": "./fireExtinguishers/cleanAgentFireExtinguishers.png",
-      "title": "Clean Agent Fire Extinguishers",
+      "image": "./fireExtinguishers/abcFireExtinguishers.png",
+      "title": "ABC Fire Extinguishers",
       "description": ["ABC type fire extinguisher is an ISI marked extinguisher.",
         "It helps to protect from all three A. B. C classes and Electrical fire.",
         "Class A: Papers, Wood, Cloth, Rubber, Plastic.",
         "Class B: Inflammable liquid like oil, Petrol, Petrochemical Product.",
         "Class C: Gases, solvents, oil, gasoline, paint, lacquers, tars and other synthetic or oil-based products.",
         "Capacity: 1kg, 2kg ,4kg, 6kg, 9kg, 25kg, 50kg, 75kg.",
-        "Warrenty for 5 years in ISI branded fire extinguishers.",
+        "Warranty for 5 years in ISI branded fire extinguishers.",
         "Can be refilled after each use.",
         "Control small fires, often in emergency situations, not intended for use on an out-of-control fire.",
         "It uses a specially fluidized and silicon zed monoammonium phosphate powder."]
+    },
+    {
+    "image": "./fireExtinguishers/powderFireExtinguishers.png",
+    "title": "Powder Fire Extinguishers"
+    },
+    {
+      "image": "./fireExtinguishers/cleanAgentFireExtinguishers.png",
+      "title": "Clean Agent Fire Extinguishers"
     },
     {
       "image": "./fireExtinguishers/waterFireExtinguishers.png",
