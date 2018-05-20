@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
     "react-map-components": "^1.0.12",
     "react-responsive-carousel": "^3.1.33",
     "react-responsive-modal": "^2.0.1",
@@ -15,6 +15,8 @@
     "pubsub-js": "^1.6.0",
     "rc-menu": "^6.2.6",
     "http-proxy": "^1.16.2",
+    "redux": "^4.0.0",
+    "video-react": "^0.10.5",
     "sync-request": "^4.1.0"
   },
   "scripts": {

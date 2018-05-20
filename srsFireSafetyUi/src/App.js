@@ -7,7 +7,8 @@ import Carousel from './components/carousel';
 import DisplayItemList from './components/displayItemList';
 import Footer from './components/footer';
 import Header from './components/header';
-import ServiceDetails from './components/serviceDetails'
+import ServiceDetails from './components/serviceDetails';
+import Projects from './components/projects';
 
 const productsStyle = {
     width: '99vw',
@@ -29,16 +30,16 @@ class App extends Component {
                 this.setState({showCarousel: true, showCatalog: false });
                 break;
             case 'products':
-                this.setState({showCarousel: false, showCatalog: true, sideMenuList: 'products', showItemList: true, showServiceDetail: false });
+                this.setState({showCarousel: false, showCatalog: true, sideMenuList: 'products', showItemList: true, showServiceDetail: false , showProjects: false });
                 break;
             case 'services':
-                this.setState({showCarousel: false, showCatalog: true, sideMenuList: 'services', showItemList: false, showServiceDetail: true });
+                this.setState({showCarousel: false, showCatalog: true, sideMenuList: 'services', showItemList: false, showServiceDetail: true, showProjects: false  });
                 break;
             case 'contact':
-                this.setState({showCarousel: false, showCatalog: false, showItemList: false, showServiceDetail: false });
+                this.setState({showCarousel: false, showCatalog: false, showItemList: false, showServiceDetail: false, showProjects: false  });
                 break;
             case 'projects':
-                this.setState({showCarousel: false, showCatalog: false, showItemList: false, showServiceDetail: false });
+                this.setState({showCarousel: false, showCatalog: false, showItemList: false, showServiceDetail: false, showProjects: true });
                 break;
             default:
                 this.setState({showCarousel: true, showCatalog: false });
@@ -67,6 +68,7 @@ class App extends Component {
             </div>
             : null
         }
+        { this.state.showProjects ? <Projects /> : null }
         <Footer />
       </div>
     );

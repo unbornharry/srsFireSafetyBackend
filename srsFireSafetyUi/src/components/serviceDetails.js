@@ -51,7 +51,6 @@ class serviceDetails extends Component {
     render(){
         return (
             <div style = {style}>
-
             </div>
         );
     }
