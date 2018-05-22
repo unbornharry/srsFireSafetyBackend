@@ -7,7 +7,9 @@ import '../../node_modules/rc-menu/assets/index.css';
 const headerStyle = {
     width: '100%',
     minWidth: '1000px',
-    position: 'relative',
+    position: 'sticky',
+    top: '0',
+    zIndex: '1',
     height: '130px',
     background: '#222D32',
     textAlign: 'center',
