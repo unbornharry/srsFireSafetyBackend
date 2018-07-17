@@ -7,8 +7,10 @@ export default (props) => {
   return (
     <Player
       playsInline
-      poster="/assets/poster.png"
+      poster="./exhibition/1.jpg"
       src="./videos/1.mp4"
+      width="640px"
+      height="360px"
     />
   );
 };
