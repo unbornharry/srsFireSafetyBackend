@@ -4,9 +4,9 @@ import GoogleMap from './googleMap';
 import Callback from './callback';
 
 const footerStyle = {
-    margin: '10px',
+    margin: '10px 0',
     padding: '20px',
-    width: '99%',
+    width: '100vw',
     minWidth: '1000px',
     position: 'relative',
     height: '400px',

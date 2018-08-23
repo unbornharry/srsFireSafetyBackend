@@ -9,6 +9,7 @@ import Footer from './components/footer';
 import Header from './components/header';
 import ServiceDetails from './components/serviceDetails';
 import Projects from './components/projects';
+import CompanyProfile from './components/companyProfile';
 
 const productsStyle = {
     width: '99vw',
@@ -20,29 +21,29 @@ class App extends Component {
 
     constructor(props){
         super(props);
-        this.state = {showCarousel: true};
+        this.state = {showCarousel: true, showCompanyProfile: true };
     }
 
     mainMenuSelectionUpdate = (msg, data) => {
         if(data.selection)
             switch(data.selection){
             case 'home':
-                this.setState({showCarousel: true, showCatalog: false });
+                this.setState({showCarousel: true, showCatalog: false, showCompanyProfile: true });
                 break;
             case 'products':
-                this.setState({showCarousel: false, showCatalog: true, sideMenuList: 'products', showItemList: true, showServiceDetail: false , showProjects: false });
+                this.setState({showCarousel: false, showCatalog: true, sideMenuList: 'products', showItemList: true, showServiceDetail: false , showProjects: false, showCompanyProfile: false });
                 break;
             case 'services':
-                this.setState({showCarousel: false, showCatalog: true, sideMenuList: 'services', showItemList: false, showServiceDetail: true, showProjects: false  });
+                this.setState({showCarousel: false, showCatalog: true, sideMenuList: 'services', showItemList: false, showServiceDetail: true, showProjects: false, showCompanyProfile: false  });
                 break;
             case 'contact':
-                this.setState({showCarousel: false, showCatalog: false, showItemList: false, showServiceDetail: false, showProjects: false  });
+                this.setState({showCarousel: false, showCatalog: false, showItemList: false, showServiceDetail: false, showProjects: false, showCompanyProfile: false  });
                 break;
             case 'projects':
-                this.setState({showCarousel: false, showCatalog: false, showItemList: false, showServiceDetail: false, showProjects: true });
+                this.setState({showCarousel: false, showCatalog: false, showItemList: false, showServiceDetail: false, showProjects: true, showCompanyProfile: false });
                 break;
             default:
-                this.setState({showCarousel: true, showCatalog: false });
+                this.setState({showCarousel: true, showCatalog: false, showCompanyProfile: true });
                 break;
             }
     }
@@ -69,6 +70,7 @@ class App extends Component {
             : null
         }
         { this.state.showProjects ? <Projects /> : null }
+        { this.state.showCompanyProfile ? <CompanyProfile /> : null }
         <Footer />
       </div>
     );
