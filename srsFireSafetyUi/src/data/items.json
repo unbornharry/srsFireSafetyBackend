@@ -15,7 +15,13 @@
     },
     {
       "image": "./fireExtinguishers/cleanAgentFireExtinguishers.png",
-      "title": "Clean Agent Fire Extinguishers"
+      "title": "Clean Agent Fire Extinguishers",
+      "description":["Clean Agent fire suppressant is stored as a liquid under pressure that turns to gas on discharge to air",
+        "Clean agent extinguishers were developed as an environmentally acceptable alternative to Halon which is now banned in the UK",
+        "Clean Agent is effective on Class B and C fires typically petrol, oil, propane, butane etc",
+        "Clean agent extinguishers act to extinguish a fire by smothering it without damaging delicate electronic equipment external to the fire or leaving a residue",
+        "The Clean Agent does not conduct electricity back to the user making them also effective on electrical fires",
+        "Typical applications include Boats, Computer Rooms, Clean rooms, switch rooms and telecomms, Data Storage Areas and art storage rooms"]
     },
     {
       "image": "./fireExtinguishers/waterFireExtinguishers.png",
@@ -55,15 +61,33 @@
     },
     {
       "image": "./fireExtinguishers/waterMistFireExtinguishers.png",
-      "title": "Water Mist Fire Extinguishers"
+      "title": "Water Mist Fire Extinguishers",
+      "description": ["A water mist system is a fire protection system which uses very fine water sprays (i.e. water mist)",
+      "Cools both the flame and surrounding gases by evaporation",
+      "Displaces oxygen by evaporation",
+      "Attenuating radiant heat by the small droplets themselves",
+      "Immediate activation",
+      "High efficiency in the suppression of a wide variety of fires",
+      "Minimized water damage",
+      "Environmentally sound characteristics",
+      "No toxic problems",
+      "Effectiveness depends on its spray characteristics like droplet size distribution, flux density and spray dynamics with respect to the fire scenario, such as the shielding of the fuel, fire size and ventilation conditions"]
     },
     {
       "image": "./fireExtinguishers/backupTrolleyFireExtinguishers.png",
-      "title": "Backup Trolley Mount Fire Extinguishers"
+      "title": "Backup Trolley Mount Fire Extinguishers",
+	  "description": ["Trolley-mounted fire extinguisher serves as a back-up solution",
+		"The very size and power of trolley-mounted fire extinguishers make them an ideal choice for any delayed attack on fire",
+		"They are the second line of defense when hand-held extinguishers are not able to douse fire",
+		"Sometimes, these large-sized extinguishers could be the only solution for such places that are in isolated regions or are very crowded and where fire brigades may take time to reach or may not reach at all",
+		"Trolley-mounted fire extinguishers are also ideal for locations where volatile class B materials are stored in abundance and there is no time to wait for a fire brigade in case of a fire"]
     },
     {
       "image": "./fireExtinguishers/mriSafeFireExtinguishers.png",
-      "title": "MRI Safe Fire Extinguishers"
+      "title": "MRI Safe Fire Extinguishers",
+	  "description": ["MRI safe fire extinguishers are available in a pre filled extinguisher or deionized water extinguisher",
+		"The agent in the MRI safe pre filled fire extinguisher is proven to be electrically non conductive, leaves no residue, and requires no clean up",
+		"The non magnetic water filled fire extinguisher is best for hospital environments, telecommunications facilities, and clean room manufacturing facilities"]
     },
     {
       "image": "./fireExtinguishers/automaticFireExtinguishers.png",
@@ -88,9 +112,9 @@
     }
   ],
   "fireHydrantSystem": [{
-    "image": "./fireHydrantSystem/YARD FIRE HYDRONT SYSTEM.png",
-    "title": "Yard Fire Hydrant System"
-  },
+		"image": "./fireHydrantSystem/YARD FIRE HYDRONT SYSTEM.png",
+		"title": "Yard Fire Hydrant System"
+	},
     {
       "image": "./fireHydrantSystem/HYDRANT ACCESSORIES.png",
       "title": "Hydrant Accessories"

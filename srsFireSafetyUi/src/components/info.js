@@ -43,6 +43,7 @@ class info extends Component {
                 <p>Phone:  99407-99273  |   86952-99273</p>
                 <p><a style={linkStyle} href="mailto:info@srsfiresafety.com">info@srsfiresafety.com</a></p>
                 <a style={linkStyle} href="http://www.srsfiresafety.com">www.srsfiresafety.com</a>
+                <p>Copyright © 2018 - SRS Enterprises. All Rights Reserved.</p>
             </div>
         </div>
        );
