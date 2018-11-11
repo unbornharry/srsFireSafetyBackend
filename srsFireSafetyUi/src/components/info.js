@@ -5,11 +5,8 @@ const infoStyle = {
     width: '30vw',
     minWidth: '300px',
     display: 'block',
-    clear: 'both',
     textAlign: 'center',
-    verticalAlign: 'top',
     right: '1vw',
-    height: '100px',
     color: 'white',
     fontFamily: 'verdana'
 };

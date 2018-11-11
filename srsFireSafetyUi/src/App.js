@@ -28,7 +28,7 @@ class App extends Component {
         if(data.selection)
             switch(data.selection){
             case 'home':
-                this.setState({showCarousel: true, showCatalog: false, showCompanyProfile: true });
+                this.setState({showCarousel: true, showCatalog: false, showCompanyProfile: true, showServiceDetail: false, showProjects: false });
                 break;
             case 'products':
                 this.setState({showCarousel: false, showCatalog: true, sideMenuList: 'products', showItemList: true, showServiceDetail: false , showProjects: false, showCompanyProfile: false });
