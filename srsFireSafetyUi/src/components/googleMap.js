@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 
 const mapStyle = {
-    width: '40vw',
+    width: '30vw',
     minWidth: '400px',
     height: '350px',
     display: 'inline-block',

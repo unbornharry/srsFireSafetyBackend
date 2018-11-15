@@ -5,13 +5,11 @@ const infoStyle = {
     width: '30vw',
     minWidth: '300px',
     display: 'block',
-    clear: 'both',
     textAlign: 'center',
-    verticalAlign: 'top',
     right: '1vw',
-    height: '100px',
     color: 'white',
-    fontFamily: 'verdana'
+    fontFamily: '"Helvetica Neue",Helvetica,Arial,"Liberation Sans",Roboto,Noto,sans-serif !important',
+    fontWeight: 'normal'
 };
 
 const nameStyle = {

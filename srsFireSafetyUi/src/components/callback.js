@@ -1,115 +1,180 @@
 import React, { Component } from 'react';
-
+import { FormGroup, FormControl, ControlLabel, Button, Panel, Form, Col } from 'react-bootstrap';
 
 const callbackStyle = {
     width: '30vw',
-    minWidth: '300px',
-    float: 'left',
-    marginRight: '21px',
-    background: '#222D32',
-    borderRadius: '6px',
-    padding: '10px',
-    border: '2px solid white'
+    minWidth: '400px'
 };
-
-const buttonStyle = {
-	background: '#4CAF50', /* Green */
-    border: 'none',
-    borderRadius: '4px',
-    color: 'white',
-    padding: '5px 10px',
-    textAlign: 'center',
-    textDecoration: 'none',
-	display: 'inline-block',
-    fontSize: '14px',
-    margin: '2px 2px',
-    cursor: 'pointer',
-    WebkitTransitionDuration: '0.4s', /* Safari */
-    transitionDuration: '0.4s',
-	boxShadowhadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)',
-};
-
-const red = {
-    background : 'red'
-}
-
-const white = {
-    background : 'white'
-}
-
-const green = {
-    color: 'green',
-    fontWeight: 'bold'
-}
 
 class callback extends Component {
 
     constructor(props){
         super(props);
-        this.state = {name: 'white', mobile: 'white', email: 'white', message: ''};
+        this.state = {name: '', mobile: '', email: '', subject: ''};
     }
 
     onSubmitClick = () => {
-        this.setState({message: ''})
-        if(this._name.value === '' || this._mobile.value === '' || this._email.value === ''){
-            if(this._name.value === '') this.setState( {name: 'red'})
-            else this.setState({name:'white'})
-            if(this._mobile.value === '') this.setState( {mobile: 'red'})
-            else this.setState({mobile:'white'})
-            if(this._email.value === '') this.setState( {email: 'red'})
-            else this.setState({email:'white'})
-            return;
+        if (this.validateName() === 'success' && this.validateMobile() === 'success' && this.validateEmail() === 'success' && this.validateSubject() === 'success'){
+            fetch('/send?subject=callback - ' + this.state.name + ' - ' + this.state.mobile + ' - ' + this.state.email +
+                '&text=' + this.state.subject)
+                .then(response => response.status)
+                .then(status => {
+                    if (status === 200)
+                        this.setState({callbackRequestStatus: 'Success', callbackStatusColor: 'text-success'});
+                    else
+                        this.setState({ callbackRequestStatus: 'Failure - ' + status, callbackStatusColor: 'text-danger' });
+                })
+                .catch(response => this.setState({ callbackRequestStatus: 'Failure - ' + response.status, callbackStatusColor: 'text-danger' }));
         }
-        else this.setState({name: 'white', mobile: 'white', email: 'white'})
-        fetch('/send?subject=callback - ' + this._name.value + ' - ' + this._mobile.value + ' - ' + this._email.value +
-            '&text=' + this._message.value)
-            .then(response => response.status)
-            .then(status => this.setState({message: 'Success'}));
-    }
+        else this.setState({callbackRequestStatus: 'Failure - Fill required fields', callbackStatusColor: 'text-danger'})
+    };
+
+    validateName = () => {
+        let nameValidation;
+        const name = this.state.name;
+        if(name === '')
+            nameValidation = 'null';
+        else if (name.length > 1)
+            nameValidation = 'success';
+        else
+            nameValidation = 'error';
+        // this.setState({nameValidation: nameValidation});
+        return nameValidation;
+    };
+
+    validateMobile = () => {
+        const mobile = this.state.mobile;
+        let phoneno = /^\d{10}$/, mobileValidation;
+        if (mobile === '')
+            mobileValidation = 'null';
+        else if((mobile.match(phoneno)))
+            mobileValidation = 'success';
+        else
+            mobileValidation = 'error';
+        // this.setState({mobileValidation: mobileValidation});
+        return mobileValidation
+    };
+
+    validateEmail = () => {
+        let emailValidation;
+        const email = this.state.email;
+        if(email === '')
+            emailValidation = 'null';
+        else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
+            emailValidation = 'success';
+        else
+            emailValidation = 'error';
+        // this.setState({emailValidation: emailValidation});
+        return emailValidation;
+    };
+
+    validateSubject = () => {
+        let subjectValidation;
+        const subject = this.state.subject;
+        if (subject === '')
+            subjectValidation = 'null';
+        else if (subject.length > 1)
+            subjectValidation = 'success';
+        else
+            subjectValidation = 'error';
+        // this.setState({subjectValidation: subjectValidation});
+        return subjectValidation;
+    };
+
+    handleNameChange = (e) => {
+        this.setState({ name: e.target.value });
+    };
+
+    handleMobileChange = (e) => {
+        this.setState({ mobile: e.target.value });
+    };
+
+    handleEmailChange = (e) => {
+        this.setState({ email: e.target.value });
+    };
+
+    handleSubjectChange = (e) => {
+        this.setState({ subject: e.target.value });
+    };
 
     render(){
         return(
-        <div style={callbackStyle}>
-            <h3>Request Callback</h3>
-
-            <form>
-                <table width="257" border="0" align="center" cellPadding="0" cellSpacing="5">
-                    <tbody>
-                        <tr>
-                            <td width="100">Name*</td>
-                            <td width="10">:</td>
-                            <td style={eval(this.state.name)}><input name="Name" type="text" id="Name" ref={input => this._name = input} /></td>
-                        </tr>
-
-                        <tr>
-                            <td>Mobile*</td>
-                            <td>:</td>
-                            <td style={eval(this.state.mobile)}><input type="text" name="Mobile" id="Mobile" ref={input => this._mobile = input} /></td>
-                        </tr>
-
-                        <tr>
-                            <td>Email*</td>
-                            <td>:</td>
-                            <td style={eval(this.state.email)}><input type="text" name="Email" id="Email" ref={input => this._email = input} /></td>
-                        </tr>
-
-                        <tr>
-                            <td>Query</td>
-                            <td>:</td>
-                            <td><textarea name="Message" id="Message" rows="5" cols="25" ref={input => this._message = input}></textarea></td>
-                        </tr>
-
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td><input type="button" id="submit" value="Send Request" style={buttonStyle} onClick ={this.onSubmitClick}/>
-                            <span style={green}>{this.state.message}</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </form>
-        </div>
+            <div style={callbackStyle}>
+            <Panel>
+                <Panel.Heading>Request Callback</Panel.Heading>
+                <Panel.Body>
+                    <Form horizontal>
+                        <FormGroup
+                            controlId="Name"
+                            validationState={this.validateName()}
+                        >
+                            <Col componentClass={ControlLabel} sm={2}>
+                                Name
+                            </Col>
+                            <Col sm={9}>
+                                <FormControl
+                                    type="text"
+                                    value={this.state.name}
+                                    placeholder="Enter Name"
+                                    onChange={this.handleNameChange}
+                                />
+                                <FormControl.Feedback/>
+                            </Col>
+                        </FormGroup>
+                        <FormGroup
+                            controlId="Phone"
+                            validationState={this.validateMobile()}
+                        >
+                            <Col componentClass={ControlLabel} sm={2}>
+                                Mobile
+                            </Col>
+                            <Col sm={9}>
+                                <FormControl
+                                    type="text"
+                                    value={this.state.mobile}
+                                    placeholder="Enter Mobile number"
+                                    onChange={this.handleMobileChange}
+                                />
+                                <FormControl.Feedback/>
+                            </Col>
+                        </FormGroup>
+                        <FormGroup
+                            controlId="Email"
+                            validationState={this.validateEmail()}
+                        >
+                            <Col componentClass={ControlLabel} sm={2}>
+                                Email ID
+                            </Col>
+                            <Col sm={9}>
+                                <FormControl
+                                    type="text"
+                                    value={this.state.email}
+                                    placeholder="Enter Email ID"
+                                    onChange={this.handleEmailChange}
+                                />
+                                <FormControl.Feedback/>
+                            </Col>
+                        </FormGroup>
+                        <FormGroup
+                            controlId="Subject"
+                            validationState={this.validateSubject()}
+                        >
+                            <Col componentClass={ControlLabel} sm={2}>
+                                Subject
+                            </Col>
+                            <Col sm={9}>
+                                <textarea type="text" id="form7" value={this.state.subject} onChange={this.handleSubjectChange} className="md-textarea form-control" rows="3" placeholder="Subject for callback"></textarea>
+                                <FormControl.Feedback/>
+                            </Col>
+                        </FormGroup>
+                        <Button type="button" className="center-block" onClick={this.onSubmitClick}>Submit</Button>
+                        <div>
+                            <span className={`${this.state.callbackStatusColor}`}>{this.state.callbackRequestStatus}</span>
+                        </div>
+                    </Form>
+                </Panel.Body>
+            </Panel>
+            </div>
         )
     }
 }

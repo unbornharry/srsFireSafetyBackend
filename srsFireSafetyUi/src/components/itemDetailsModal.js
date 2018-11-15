@@ -35,19 +35,17 @@ class itemDetailsModal extends Component {
                 onHide={this.handleClose}
                 bsSize="large"
                 aria-labelledby="contained-modal-title-lg"
-                animation={false}
-                backdrop={false}
             >
                 <Modal.Header>
                     <Modal.Title id="contained-modal-title-lg">{title}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <table style={{color:'red'}}>
+                    <table >
                         <tbody>
                             <tr>
                              <td><img src={img_src}  alt=""/> </td>
                              <td>
-                                 {description ? <div style={{color:'red', fontWeight: 'bold'}}>Description:</div> : null }
+                                 {description ? <div style={{fontWeight: 'bold'}}>Description:</div> : null }
                                  <div>
                                      <ul>
                                      {description ? description.map(para => (<li>{para}</li>)) : null}
@@ -57,7 +55,7 @@ class itemDetailsModal extends Component {
                             </tr>
                             <tr>
                             <td></td>
-                            <td style={{color:'red'}}>
+                            <td>
                              {options ? <p style={{color:'red', fontWeight: 'bold'}}>Options</p> : null}
                              <form className="boxed">
                              {options ? options.map(option =>(<label>{option}<input type="radio" id={option} value={option}/></label>)) : null}
