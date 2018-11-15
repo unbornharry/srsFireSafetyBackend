@@ -10,36 +10,91 @@ class callback extends Component {
 
     constructor(props){
         super(props);
-        this.state = {name: '', mobile: '', email: '', message: ''};
+        this.state = {name: '', mobile: '', email: '', subject: ''};
     }
 
     onSubmitClick = () => {
-        this.setState({message: ''});
-        if(this.state.name === '' || this.state.mobile === '' || this.state.email === ''){
-            if(this._name.value === '') this.setState( {name: 'red'})
-            else this.setState({name:'white'})
-            if(this._mobile.value === '') this.setState( {mobile: 'red'})
-            else this.setState({mobile:'white'})
-            if(this._email.value === '') this.setState( {email: 'red'})
-            else this.setState({email:'white'})
-            return;
+        if (this.validateName() === 'success' && this.validateMobile() === 'success' && this.validateEmail() === 'success' && this.validateSubject() === 'success'){
+            fetch('/send?subject=callback - ' + this.state.name + ' - ' + this.state.mobile + ' - ' + this.state.email +
+                '&text=' + this.state.subject)
+                .then(response => response.status)
+                .then(status => {
+                    if (status === 200)
+                        this.setState({callbackRequestStatus: 'Success', callbackStatusColor: 'text-success'});
+                    else
+                        this.setState({ callbackRequestStatus: 'Failure - ' + status, callbackStatusColor: 'text-danger' });
+                })
+                .catch(response => this.setState({ callbackRequestStatus: 'Failure - ' + response.status, callbackStatusColor: 'text-danger' }));
         }
-        else this.setState({name: 'white', mobile: 'white', email: 'white'})
-        fetch('/send?subject=callback - ' + this._name.value + ' - ' + this._mobile.value + ' - ' + this._email.value +
-            '&text=' + this._message.value)
-            .then(response => response.status)
-            .then(status => this.setState({message: 'Success'}));
+        else this.setState({callbackRequestStatus: 'Failure - Fill required fields', callbackStatusColor: 'text-danger'})
     };
 
-    getValidationState() {
-        const length = this.state.name.length;
-        console.log(length);
-        if (length > 0) return 'success';
-        else return 'error';
+    validateName = () => {
+        let nameValidation;
+        const name = this.state.name;
+        if(name === '')
+            nameValidation = 'null';
+        else if (name.length > 1)
+            nameValidation = 'success';
+        else
+            nameValidation = 'error';
+        // this.setState({nameValidation: nameValidation});
+        return nameValidation;
     };
 
-    handleChange = (e) => {
+    validateMobile = () => {
+        const mobile = this.state.mobile;
+        let phoneno = /^\d{10}$/, mobileValidation;
+        if (mobile === '')
+            mobileValidation = 'null';
+        else if((mobile.match(phoneno)))
+            mobileValidation = 'success';
+        else
+            mobileValidation = 'error';
+        // this.setState({mobileValidation: mobileValidation});
+        return mobileValidation
+    };
+
+    validateEmail = () => {
+        let emailValidation;
+        const email = this.state.email;
+        if(email === '')
+            emailValidation = 'null';
+        else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
+            emailValidation = 'success';
+        else
+            emailValidation = 'error';
+        // this.setState({emailValidation: emailValidation});
+        return emailValidation;
+    };
+
+    validateSubject = () => {
+        let subjectValidation;
+        const subject = this.state.subject;
+        if (subject === '')
+            subjectValidation = 'null';
+        else if (subject.length > 1)
+            subjectValidation = 'success';
+        else
+            subjectValidation = 'error';
+        // this.setState({subjectValidation: subjectValidation});
+        return subjectValidation;
+    };
+
+    handleNameChange = (e) => {
         this.setState({ name: e.target.value });
+    };
+
+    handleMobileChange = (e) => {
+        this.setState({ mobile: e.target.value });
+    };
+
+    handleEmailChange = (e) => {
+        this.setState({ email: e.target.value });
+    };
+
+    handleSubjectChange = (e) => {
+        this.setState({ subject: e.target.value });
     };
 
     render(){
@@ -51,7 +106,7 @@ class callback extends Component {
                     <Form horizontal>
                         <FormGroup
                             controlId="Name"
-                            validationState={this.getValidationState()}
+                            validationState={this.validateName()}
                         >
                             <Col componentClass={ControlLabel} sm={2}>
                                 Name
@@ -61,14 +116,14 @@ class callback extends Component {
                                     type="text"
                                     value={this.state.name}
                                     placeholder="Enter Name"
-                                    onChange={this.handleChange}
+                                    onChange={this.handleNameChange}
                                 />
                                 <FormControl.Feedback/>
                             </Col>
                         </FormGroup>
                         <FormGroup
                             controlId="Phone"
-                            validationState={this.getValidationState()}
+                            validationState={this.validateMobile()}
                         >
                             <Col componentClass={ControlLabel} sm={2}>
                                 Mobile
@@ -78,14 +133,14 @@ class callback extends Component {
                                     type="text"
                                     value={this.state.mobile}
                                     placeholder="Enter Mobile number"
-                                    onChange={this.handleChange}
+                                    onChange={this.handleMobileChange}
                                 />
                                 <FormControl.Feedback/>
                             </Col>
                         </FormGroup>
                         <FormGroup
                             controlId="Email"
-                            validationState={this.getValidationState()}
+                            validationState={this.validateEmail()}
                         >
                             <Col componentClass={ControlLabel} sm={2}>
                                 Email ID
@@ -95,24 +150,27 @@ class callback extends Component {
                                     type="text"
                                     value={this.state.email}
                                     placeholder="Enter Email ID"
-                                    onChange={this.handleChange}
+                                    onChange={this.handleEmailChange}
                                 />
                                 <FormControl.Feedback/>
                             </Col>
                         </FormGroup>
                         <FormGroup
                             controlId="Subject"
-                            validationState={this.getValidationState()}
+                            validationState={this.validateSubject()}
                         >
                             <Col componentClass={ControlLabel} sm={2}>
                                 Subject
                             </Col>
                             <Col sm={9}>
-                                <textarea type="text" id="form7" value={this.state.message} className="md-textarea form-control" rows="3" placeholder="Subject for callback"></textarea>
+                                <textarea type="text" id="form7" value={this.state.subject} onChange={this.handleSubjectChange} className="md-textarea form-control" rows="3" placeholder="Subject for callback"></textarea>
                                 <FormControl.Feedback/>
                             </Col>
                         </FormGroup>
-                        <Button type="submit" className="center-block" onClick={this.onSubmitClick}>Submit</Button>
+                        <Button type="button" className="center-block" onClick={this.onSubmitClick}>Submit</Button>
+                        <div>
+                            <span className={`${this.state.callbackStatusColor}`}>{this.state.callbackRequestStatus}</span>
+                        </div>
                     </Form>
                 </Panel.Body>
             </Panel>

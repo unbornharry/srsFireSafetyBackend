@@ -8,7 +8,8 @@ const infoStyle = {
     textAlign: 'center',
     right: '1vw',
     color: 'white',
-    fontFamily: 'verdana'
+    fontFamily: '"Helvetica Neue",Helvetica,Arial,"Liberation Sans",Roboto,Noto,sans-serif !important',
+    fontWeight: 'normal'
 };
 
 const nameStyle = {
