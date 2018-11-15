@@ -1,8 +1,8 @@
-var express = require('express');
-var nodemailer = require("nodemailer");
-var router = express.Router();
+let express = require('express');
+let nodemailer = require("nodemailer");
+let router = express.Router();
 
-var smtpTransport = nodemailer.createTransport({
+let smtpTransport = nodemailer.createTransport({
     service: "yahoo",
     host: "smtp.mail.yahoo.com",
     port: 587,
@@ -17,12 +17,12 @@ var smtpTransport = nodemailer.createTransport({
 router.get('/',function(req,res){
 
     console.log("Got request to send email");
-    var mailOptions={
+    let mailOptions={
        from: 'untamedbarbarian@yahoo.com',
-       to : 'untamedbarbarian@yahoo.com',
+       to : 'srsfiresafety.com@gmail.com',
        subject : req.query.subject,
        text : req.query.text
-    }
+    };
     console.log(mailOptions);
     smtpTransport.sendMail(mailOptions, function(error, response){
     if(error){
