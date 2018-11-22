@@ -15,6 +15,7 @@
     "react-map-components": "^1.0.12",
     "react-responsive-carousel": "^3.1.33",
     "react-responsive-modal": "^2.0.1",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.1",
     "react-sidemenu": "^0.0.14",
     "reactjs-carousel": "^1.16.1",

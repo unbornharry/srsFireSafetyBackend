@@ -53,19 +53,19 @@ class displayItem extends Component {
     constructor(props){
         super(props);
         this.state = {modalOpen: false};
-    }
+    };
 
     componentDidMount() {
         this.token = PubSub.subscribe('modalClose', this.modalClosed);
-    }
+    };
 
     modalClosed = (msg, data) => {
         this.setState({modalOpen: data.open});
-    }
+    };
 
     openModal = () => {
         this.setState({modalOpen: true});
-    }
+    };
     render(){
         let { image, title, description, options} = this.props;
         let img_src = images(image);
