@@ -172,19 +172,19 @@
     }
   ],
   "escapeSignsAndLighting": [{
-    "image": "./comingSoon.png",
+    "image": "./escapeSignsAndLighting/photoLuminescentSignage.png",
     "title": "Photo Luminescent Sign Boards"
   },
     {
-      "image": "./comingSoon.png",
+      "image": "./escapeSignsAndLighting/LedSignBoards.png",
       "title": "LED Sign Boards"
     },
     {
-      "image": "./comingSoon.png",
+      "image": "./escapeSignsAndLighting/normalSignBoard.png",
       "title": "Normal Sign Boards"
     },
     {
-      "image": "./comingSoon.png",
+      "image": "./escapeSignsAndLighting/emergencyExitLight.png",
       "title": "Emergency Exit Lights"
     }
   ],
