@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Logo from './logo';
 import Menu, {MenuItem} from 'rc-menu';
 import '../../node_modules/rc-menu/assets/index.css';
-import { BrowserRouter, Route, Link, Redirect } from 'react-router-dom';
+import { BrowserRouter, Route, Link, Switch, Redirect } from 'react-router-dom';
 import Home from './pages/home';
 import Products from './pages/products';
 import Services from './pages/services';
@@ -47,16 +47,16 @@ const menuItemStyle = {
 };
 
 class headerAndFooter extends Component {
-    componentWillMount = () => {
-        this.setState({});
-    };
+    componentWillMount() {
+        this.setState({redirect: 'home'});
+    }
 
     menuItemClicked = ({ key }) => {
         this.setState({redirect: key});
     };
 
     render(){
-      return(
+        return(
         <BrowserRouter>
           <div>
             <div style={headerStyle}>
@@ -64,7 +64,7 @@ class headerAndFooter extends Component {
                     <Logo />
                     <h1 style={headingStyle}> SRS ENTERPRISES </h1>
                 </div>
-                <Menu style={menuStyle} mode="horizontal" defaultActiveFirst={true} onClick={this.menuItemClicked}>
+                <Menu style={menuStyle} mode="horizontal" defaultActiveFirst={true} onClick={this.menuItemClicked} activeKey={this.state.redirect}>
                     <MenuItem style={menuItemStyle} key='home'><Link style={menuItemStyle} to="/home">Home</Link></MenuItem>
                     <MenuItem style={menuItemStyle} key='products'><Link style={menuItemStyle} to="/products">Products</Link></MenuItem>
                     <MenuItem style={menuItemStyle} key='services'><Link style={menuItemStyle} to="/services">Services</Link></MenuItem>
@@ -72,11 +72,14 @@ class headerAndFooter extends Component {
                     <MenuItem style={menuItemStyle} key='contact'><Link style={menuItemStyle} to="/contact">Contact Us</Link></MenuItem>
                 </Menu>
             </div>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/home" component={Home} />
-            <Route exact path="/products" component={Products} />
-            <Route exact path="/services" component={Services} />
-            <Route exact path="/projects" component={Projects} />
+              <Redirect to={`${this.state.redirect}`}/>
+              <Switch>
+                  <Route exact path="/" component={Home} />
+                  <Route exact path="/home" component={Home} />
+                  <Route exact path="/products" component={Products} />
+                  <Route exact path="/services" component={Services} />
+                  <Route exact path="/projects" component={Projects} />
+              </Switch>
             <Footer />
           </div>
         </BrowserRouter>

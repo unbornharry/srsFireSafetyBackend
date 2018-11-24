@@ -8,6 +8,7 @@ import attributeList from '../data/items.json';
 const style = {
     background: '#222d32',
     display: 'inline-block',
+    whiteSpace: 'normal',
     width: 'calc(100% - 330px)',
     minWidth: '670px',
     margin: '0 0 0 10px',
@@ -29,10 +30,9 @@ class displayItemList extends Component {
     }
 
     sideMenuSelectionUpdate = (msg, data) => {
-//        console.log("Got something on the subscription : ", msg, data)
         if(attributeList[data.selection])
             this.setState({itemList: attributeList[data.selection]});
-    }
+    };
 
     componentDidMount() {
         this.setState({itemList: attributeList["fireExtinguishers"]});

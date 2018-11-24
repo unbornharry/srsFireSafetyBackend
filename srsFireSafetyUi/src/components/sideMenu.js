@@ -5,7 +5,7 @@ import PubSub from 'pubsub-js';
 import '../css/flaticon.css';
 
 const style = {
-//    background: 'black',
+    background: 'black',
     display: 'inline-block',
     maxWidth: '320px',
     minWidth: '310px',
@@ -59,7 +59,7 @@ class sideMenu extends Component {
     mainMenuSelectionUpdate = (msg, data) => {
         if(data.selection)
             this.setState({menuList: items[data.selection]});
-    }
+    };
 
     componentWillMount() {
         this.token = PubSub.subscribe('mainMenu', this.mainMenuSelectionUpdate);

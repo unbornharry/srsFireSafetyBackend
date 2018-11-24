@@ -3,7 +3,7 @@ import { FormGroup, FormControl, ControlLabel, Button, Panel, Form, Col } from '
 
 const callbackStyle = {
     width: '30vw',
-    minWidth: '400px'
+    minWidth: '200px'
 };
 
 class callback extends Component {

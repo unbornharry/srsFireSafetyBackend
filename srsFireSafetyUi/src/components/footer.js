@@ -9,7 +9,6 @@ const footerStyle = {
     width: '100vw',
     minWidth: '1000px',
     position: 'relative',
-    height: '400px',
     background: '#222D32',
     display: 'flex',
     justifyContent: 'center',

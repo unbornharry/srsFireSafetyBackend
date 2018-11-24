@@ -20,6 +20,7 @@ const style = {
     background: '#222d32',
     display: 'inline-block',
     width: 'calc(100% - 330px)',
+    whiteSpace: 'normal',
     minWidth: '670px',
     margin: '0 0 0 10px',
     minHeight: '60vh',
@@ -35,16 +36,14 @@ const style = {
 class serviceDetails extends Component {
     constructor(props) {
         super(props);
-//        this.state = {itemList: attributeList["fireExtinguishers"]};
     }
 
     sideMenuSelectionUpdate = (msg, data) => {
         if(attributeList[data.selection])
             this.setState({itemList: attributeList[data.selection]});
-    }
+    };
 
     componentDidMount() {
-//        this.setState({itemList: attributeList["fireExtinguishers"]});
         this.token = PubSub.subscribe('sideMenu', this.sideMenuSelectionUpdate);
     }
 
