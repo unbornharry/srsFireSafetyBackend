@@ -9,7 +9,7 @@ const style = {
     display: 'inline-block',
     maxWidth: '320px',
     minWidth: '310px',
-    borderRadius: '15px',
+    borderRadius: '0 15px 15px 0',
     position: 'relative',
     overflow: 'auto',
     marginTop: '10px'

@@ -7,6 +7,7 @@ import Home from './pages/home';
 import Products from './pages/products';
 import Services from './pages/services';
 import Projects from './projects';
+import Contact from './pages/contact';
 import Footer from './footer';
 
 const headerStyle = {
@@ -35,8 +36,8 @@ const headingStyle = {
 const menuStyle = {
     display: 'inline-block',
     verticalAlign: 'top',
-    background: '#222D32',
-    color: 'green',
+    background: 'transparent',
+    color: 'white',
     borderRadius: '10px 10px 0 0'
 };
 
@@ -74,11 +75,12 @@ class headerAndFooter extends Component {
             </div>
               <Redirect to={`${this.state.redirect}`}/>
               <Switch>
-                  <Route exact path="/" component={Home} />
                   <Route exact path="/home" component={Home} />
                   <Route exact path="/products" component={Products} />
                   <Route exact path="/services" component={Services} />
                   <Route exact path="/projects" component={Projects} />
+                  <Route exact path="/contact" component={Contact} />
+                  <Route path="/" component={Home} />
               </Switch>
             <Footer />
           </div>

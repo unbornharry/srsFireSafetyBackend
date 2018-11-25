@@ -13,7 +13,7 @@ const footerStyle = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center'
-}
+};
 
 class footer extends Component {
     render(){

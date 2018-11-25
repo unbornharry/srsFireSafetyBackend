@@ -6,20 +6,20 @@ import PubSub from 'pubsub-js';
 import attributeList from '../data/items.json';
 
 const style = {
-    background: '#222d32',
     display: 'inline-block',
     whiteSpace: 'normal',
     width: 'calc(100% - 330px)',
     minWidth: '670px',
     margin: '0 0 0 10px',
-    minHeight: '60vh',
+    minHeight: '500px',
     borderRadius: '10px',
     position: 'relative',
     verticalAlign: 'top',
     overflow: 'auto',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center center',
-    marginTop: '10px'
+    marginTop: '10px',
+    textAlign: 'center'
 };
 
 

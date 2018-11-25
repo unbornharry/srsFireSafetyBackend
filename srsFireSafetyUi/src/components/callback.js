@@ -3,7 +3,8 @@ import { FormGroup, FormControl, ControlLabel, Button, Panel, Form, Col } from '
 
 const callbackStyle = {
     width: '30vw',
-    minWidth: '200px'
+    minWidth: '200px',
+    margin: '0 30px 0 0'
 };
 
 class callback extends Component {
@@ -102,7 +103,7 @@ class callback extends Component {
             <div style={callbackStyle}>
             <Panel>
                 <Panel.Heading>Request Callback</Panel.Heading>
-                <Panel.Body>
+                <Panel.Body className={'toRight'}>
                     <Form horizontal>
                         <FormGroup
                             controlId="Name"

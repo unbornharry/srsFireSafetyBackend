@@ -38,7 +38,7 @@ class info extends Component {
                 <p>70A/1, K.K.NAGAR,</p>
                 <p>Kavundampalayam</p>
                 <p>Coimbatore - 641030</p>
-                <p>Phone:  99407-99273  |   86952-99273</p>
+                <p>Phone:  +91 99407-99273  |   +91 86952-99273</p>
                 <p><a style={linkStyle} href="mailto:info@srsfiresafety.com">info@srsfiresafety.com</a></p>
                 <a style={linkStyle} href="http://www.srsfiresafety.com">www.srsfiresafety.com</a>
                 <p>Copyright © 2018 - SRS Enterprises. All Rights Reserved.</p>

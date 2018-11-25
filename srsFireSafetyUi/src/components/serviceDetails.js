@@ -23,7 +23,7 @@ const style = {
     whiteSpace: 'normal',
     minWidth: '670px',
     margin: '0 0 0 10px',
-    minHeight: '60vh',
+    minHeight: '450px',
     borderRadius: '10px',
     position: 'relative',
     verticalAlign: 'top',

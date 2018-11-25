@@ -4,7 +4,6 @@ var Carousel = require('react-responsive-carousel').Carousel;
 
 const carouselStyle = {
     minWidth: '1000px',
-    marginTop: '10px',
     position: 'relative'
 }
 class carousel extends Component {

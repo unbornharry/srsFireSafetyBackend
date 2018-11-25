@@ -16,7 +16,7 @@ const backgroundStyle = {
     width: '100px',
     display: 'inline-block',
     height: '75px',
-    background: '#222D32'
+    background: 'transparent'
 }
 
 class logo extends Component {
