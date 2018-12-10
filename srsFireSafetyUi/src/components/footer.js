@@ -9,7 +9,6 @@ const footerStyle = {
     width: '100vw',
     minWidth: '1000px',
     position: 'relative',
-    background: '#222D32',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center'
@@ -18,7 +17,7 @@ const footerStyle = {
 class footer extends Component {
     render(){
       return(
-      <div style={footerStyle}>
+      <div style={footerStyle} className={'grayBg'}>
         <Callback />
         <Info />
         <GoogleMap />

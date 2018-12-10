@@ -17,7 +17,6 @@ const attributeList = {
     };
 
 const style = {
-    background: '#222d32',
     display: 'inline-block',
     width: 'calc(100% - 330px)',
     whiteSpace: 'normal',
@@ -49,7 +48,7 @@ class serviceDetails extends Component {
 
     render(){
         return (
-            <div style = {style}>
+            <div style = {style} className={'grayBg'}>
             </div>
         );
     }

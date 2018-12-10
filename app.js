@@ -25,6 +25,10 @@ app.use(express.static(`${__dirname}/srsFireSafetyUi/build`));
 
 app.use('/send', email);
 
+app.use('/*', function(req, res) {
+    res.sendFile(`${__dirname}/srsFireSafetyUi/build/index.html`)
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

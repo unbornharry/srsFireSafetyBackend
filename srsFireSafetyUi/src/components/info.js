@@ -7,7 +7,7 @@ const infoStyle = {
     display: 'block',
     textAlign: 'center',
     right: '1vw',
-    color: 'white',
+    color: 'black',
     fontFamily: '"Helvetica Neue",Helvetica,Arial,"Liberation Sans",Roboto,Noto,sans-serif !important',
     fontWeight: 'normal'
 };
@@ -22,7 +22,7 @@ const logoStyle = {
 };
 
 const linkStyle = {
-    color: 'white'
+    color: 'blue'
 };
 
 

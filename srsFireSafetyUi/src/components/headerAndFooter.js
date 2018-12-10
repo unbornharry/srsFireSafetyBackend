@@ -17,7 +17,6 @@ const headerStyle = {
     top: '0',
     zIndex: '1',
     height: '130px',
-    background: '#222D32',
     textAlign: 'center',
     display: 'inline-block'
 };
@@ -26,7 +25,7 @@ const headingStyle = {
     display:'inline-block',
     verticalAlign: 'top',
     margin: '10px 0 0 20px',
-    color: 'white',
+    color: 'black',
     fontSize: '48px',
     height: 'auto',
     fontFamily: 'constantia',
@@ -44,6 +43,7 @@ const menuStyle = {
 const menuItemStyle = {
     fontFamiy: 'Arial, Helvetica, serif',
     fontWeight: 'bold',
+    color: 'black',
     borderRadius: '10px 10px 0 0'
 };
 
@@ -60,7 +60,7 @@ class headerAndFooter extends Component {
         return(
         <BrowserRouter>
           <div>
-            <div style={headerStyle}>
+            <div style={headerStyle} className={'orangeBg'}>
                 <div>
                     <Logo />
                     <h1 style={headingStyle}> SRS ENTERPRISES </h1>

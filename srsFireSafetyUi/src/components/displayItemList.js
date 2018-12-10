@@ -41,7 +41,7 @@ class displayItemList extends Component {
 
     render(){
         return (
-            <div className = "displayItemList" style = {style}>
+            <div className = "grayBg" style = {style}>
                 <MapComponents component={DisplayItem} for={this.state.itemList} />
             </div>
         );

@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import {SideMenu} from 'react-sidemenu';
-import '../../node_modules/react-sidemenu/dist/react-sidemenu.css';
+// import '../../node_modules/react-sidemenu/dist/react-sidemenu.css';
 import PubSub from 'pubsub-js';
 import '../css/flaticon.css';
 
 const style = {
-    background: 'black',
     display: 'inline-block',
     maxWidth: '320px',
     minWidth: '310px',
@@ -15,7 +14,7 @@ const style = {
     marginTop: '10px'
 };
 
-const menuItemStyle = {color: "white", fontWeight: "300", fontSize: "13px", fontFamily: 'verdana'};
+const menuItemStyle = {color: "black", fontWeight: "300", fontSize: "13px", fontFamily: 'verdana'};
 
 const items = {
     products: [
@@ -67,7 +66,7 @@ class sideMenu extends Component {
 
     render() {
         return(
-            <div style={style}>
+            <div style={style} className={'grayBg'}>
                     <SideMenu items={this.state.menuList} shouldTriggerClickOnParents={true} onMenuItemClick={this.itemClicked} renderMenuItemContent={(item) =>
                      (<span><i className={'fa ' + item.icon}></i><strong style={menuItemStyle}>   {item.label}</strong></span>)}/>
             </div>

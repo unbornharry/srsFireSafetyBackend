@@ -103,7 +103,7 @@ class callback extends Component {
             <div style={callbackStyle}>
             <Panel>
                 <Panel.Heading>Request Callback</Panel.Heading>
-                <Panel.Body className={'toRight'}>
+                <Panel.Body className={'grayBg'}>
                     <Form horizontal>
                         <FormGroup
                             controlId="Name"
